@@ -44,3 +44,19 @@ fun NoteInputText(
         modifier = modifier
     )
 }
+
+@Composable
+fun NoteButton(
+    modifier: Modifier= Modifier,
+    text:String,
+    onClick: () -> Unit,
+    enabled: Boolean = true
+) {
+    Button(onClick = onClick,
+    shape = CircleShape,
+    enabled = enabled,
+    modifier = modifier) {
+        Text(text = text)
+    }
+
+}
